@@ -122,12 +122,12 @@ https://github.com/user-attachments/assets/c1560678-e146-4460-b916-9dac9f8096eb
 
 | Archivo                | Descripción                               |
 | ---------------------- | ----------------------------------------- |
-| `Module1.mod`          | Código RAPID completo                     |
+| `LAB2_def.rspag`       | Código RAPID completo                     |
 | `herramienta.SAT`      | Modelo CAD de la herramienta              |
-| `img/WorkObject.png`   | Captura del WObj en RobotStudio           |
-| `video_simulacion.mp4` | Video de la simulación                    |
+| `img               `   | Carpeta con las imagenes del proyecto     |
+| `simulation_global.mp4` | Video de la simulación                   |
 | `video_ejecucion.mp4`  | Video del robot real ejecutando la rutina |
-| `calibracion_tool.mp4` | Video de calibración del TCP              |
+| `calib_final.mp4`      | Video de calibración del TCP              |
 
 ---
 
