@@ -48,10 +48,12 @@ Se definió un `WorkObject` con referencia al plano del pastel, permitiendo repl
 * Cuadrante principal: `x(+)`, `y(+)`
 * Cuadrante reflejado: `x(+)`, `y(–)`
 
-![WorkObject](attachment\:file-1BZDmDKJeYx14WLhnia1BN)
+![WorkObject](img/WOfin.png)
+
 *Figura: Vista superior del WorkObject y letras diseñadas sobre el pastel virtual.*
 
-![Vista superior WorkObject](attachment\:file-FjdVYyR5AkuBSvFtzXJUxz)
+![Vista superior WorkObject](img/workObj.png)
+
 *Figura: Visualización del sistema de coordenadas local del WorkObject en RobotStudio.*
 
 ---
@@ -66,10 +68,12 @@ Se crearon trayectorias para:
 ![Texto en CAD](attachment\:file-1BZDmDKJeYx14WLhnia1BN)
 *Figura: Diseño en CAD del texto "MD" con tamaño y tipo de fuente definidos en Fusion 360.*
 
-![Trayectoria Curva - RobotStudio](attachment\:file-S3xXqTmHniiGdFLKfJvoBq)
+![Trayectoria Curva - RobotStudio](img/trayect circu.png)
+
 *Figura: Conversión de movimientos lineales a circulares en RobotStudio usando la opción "Convert to Move Circular".*
 
-![Letra y trayectorias](attachment\:file-Kp1qYkRU94cXr2tgw1cvtq)
+![Letra y trayectorias](img/trayect.png)
+
 *Figura: Vista general de las trayectorias para letras y adornos con robtargets distribuidos.*
 
 ---
