@@ -93,9 +93,7 @@ La trayectoria principal `Path_MD` contiene más de 60 instrucciones `MoveL` y `
 
 ## 🧪 Resultados
 
-
-[Simulación](vid/simulation_global)
-
+https://github.com/user-attachments/assets/1ffb557b-989b-4899-82ca-1c4c2cbe38be
 * 🎥 *\[Video de la simulación en RobotStudio]*
 * 🎥 *\[Video del robot real ejecutando la rutina]*
 * 🎥 *\[Video de calibración de herramienta (TCP)]*
