@@ -106,7 +106,7 @@ https://github.com/user-attachments/assets/c1560678-e146-4460-b916-9dac9f8096eb
   
 * 🎥 *Video del robot real ejecutando la rutina*
 
-
+https://github.com/user-attachments/assets/1f7ac513-dd29-460d-893b-f6839253b33e
 ---
 
 ## 📌 Conclusiones
