@@ -65,10 +65,7 @@ Se crearon trayectorias para:
 * **Nombres del equipo**: usando líneas rectas (`MoveL`)
 * **Decoración libre**: combinando `MoveL` y `MoveC`
 
-![Texto en CAD](attachment\:file-1BZDmDKJeYx14WLhnia1BN)
-*Figura: Diseño en CAD del texto "MD" con tamaño y tipo de fuente definidos en Fusion 360.*
-
-![Trayectoria Curva - RobotStudio](img/trayect circu.png)
+![Trayectoria Curva - RobotStudio](img/trayectcircu.png)
 
 *Figura: Conversión de movimientos lineales a circulares en RobotStudio usando la opción "Convert to Move Circular".*
 
@@ -96,6 +93,8 @@ La trayectoria principal `Path_MD` contiene más de 60 instrucciones `MoveL` y `
 
 ## 🧪 Resultados
 
+
+![Simulación](vid/simulation_global.webm)
 * 🎥 *\[Video de la simulación en RobotStudio]*
 * 🎥 *\[Video del robot real ejecutando la rutina]*
 * 🎥 *\[Video de calibración de herramienta (TCP)]*
