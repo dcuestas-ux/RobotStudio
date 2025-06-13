@@ -35,7 +35,8 @@ Simular la decoración de una torta para 20 personas escribiendo los **nombres d
 
 Se diseñó una herramienta que permite sujetar un plumón al flanche del robot.
 
-![Herramienta y robot](attachment\:file-BpyEbLk2NPNubFXw54ofvF)
+![Herramienta y robot](img/robotSim.png)
+
 *Figura: Herramienta personalizada montada sobre el ABB IRB 140. Se muestran los ejes del TCP y su orientación.*
 
 ---
