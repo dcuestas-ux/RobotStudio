@@ -73,7 +73,7 @@ Se definió un `WorkObject` con referencia al plano del pastel, permitiendo repl
 
 A continuación se presenta una vista desde arriba (top view) de la celda robótica. Se observan claramente el robot ABB IRB 140, el transportador, la ubicación del pastel y la orientación del sistema.
 
-![Plano de planta de la celda](img/planta.png)
+![Plano de planta de la celda](img/planta.jpg)
 *Figura: Plano de planta de la celda. Se muestra la ubicación relativa del robot, el pastel, y el entorno de trabajo.*
 
 ---
