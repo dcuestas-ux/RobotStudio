@@ -30,23 +30,6 @@ Simular la decoración de una torta para 20 personas escribiendo los **nombres d
 * Decoración sobre cuadrantes x(+), y(+), y su espejo x(+), y(–)
 * Integración con línea de producción usando sensores y lógica de flujo de piezas
 
----
-
-## ⚙️ Lógica del Sistema de Producción (Smart Components)
-
-El sistema simula una celda con múltiples pasteles avanzando sobre una banda. Cuando un pastel llega a un punto de control (definido por un `PlaneSensor`), se detiene. En ese momento:
-
-1. El sensor activa una señal.
-2. El robot inicia la rutina `Path_MD()` sobre el objeto detectado.
-3. Tras finalizar, se reactiva la cinta mediante el componente `LinearMove`.
-4. El siguiente pastel es generado desde el `Source` y repite el ciclo.
-
-A continuación se muestra el diagrama del Smart Component utilizado en la simulación:
-
-![Diagrama Smart Component](img/SmartComponent.jpg)
-*Figura: Diagrama completo del Smart Component. Se incluyen componentes como Timer, Source, Queue, LinearMove y PlaneSensors con lógica condicional.*
-
-## Esta integración permite simular un entorno semiautónomo de producción por lotes.
 
 ## 🛠️ Herramienta Personalizada
 
@@ -59,6 +42,11 @@ Se diseñó una herramienta que permite sujetar un plumón al flanche del robot.
 ![Diseño CAD herramienta](img/CADHerramienta.jpg)
 
 *Figura: Modelo CAD de la herramienta diseñada para sujetar un marcador. Se observan los agujeros de fijación y la forma cónica adaptada a la punta del plumón.*
+
+
+* 🎥 *\[Video de calibración de herramienta (TCP)]*
+
+[https://github.com/dcuestas-ux/RobotStudio/blob/0788a954318bf5f46a4889da9c78cd59bd877060/vid/calib_final](https://github.com/user-attachments/assets/9738a95b-ae7c-4b41-90e0-3457959aa022)
 
 ---
 
@@ -148,25 +136,38 @@ flowchart TD
 
 *Figura: Diagrama de flujo con control sobre eventos de la banda transportadora virtual.*
 
+* 🎥 *\[Video de la simulación en RobotStudio]*  
+
+https://github.com/user-attachments/assets/639d4147-e196-416c-ac56-a8e2ef54de67
+
+
 ---
 
 ## 🧪 Resultados
-
-
-
-* 🎥 *\[Video de calibración de herramienta (TCP)]*
-
-[https://github.com/dcuestas-ux/RobotStudio/blob/0788a954318bf5f46a4889da9c78cd59bd877060/vid/calib_final](https://github.com/user-attachments/assets/9738a95b-ae7c-4b41-90e0-3457959aa022)
-  
-* 🎥 *\[Video de la simulación en RobotStudio]* 
-
-https://github.com/user-attachments/assets/639d4147-e196-416c-ac56-a8e2ef54de67
 
 * 🎥 *\[Video del robot real ejecutando la rutina]*
 
 https://github.com/user-attachments/assets/e9d132d2-ca6a-482b-b14e-b54ffc52ca89
 
 ---
+
+---
+
+## ⚙️ Lógica del Sistema de Producción (Smart Components)
+
+El sistema simula una celda con múltiples pasteles avanzando sobre una banda. Cuando un pastel llega a un punto de control (definido por un `PlaneSensor`), se detiene. En ese momento:
+
+1. El sensor activa una señal.
+2. El robot inicia la rutina `Path_MD()` sobre el objeto detectado.
+3. Tras finalizar, se reactiva la cinta mediante el componente `LinearMove`.
+4. El siguiente pastel es generado desde el `Source` y repite el ciclo.
+
+A continuación se muestra el diagrama del Smart Component utilizado en la simulación:
+
+![Diagrama Smart Component](img/SmartComponent.jpg)
+*Figura: Diagrama completo del Smart Component. Se incluyen componentes como Timer, Source, Queue, LinearMove y PlaneSensors con lógica condicional.*
+
+## Esta integración permite simular un entorno semiautónomo de producción por lotes.
 
 ## 📌 Conclusiones
 
@@ -183,7 +184,7 @@ El proyecto completo está organizado en las siguientes carpetas y archivos:
 
 | Archivo/Carpeta         | Descripción                                                |
 | ----------------------- | ---------------------------------------------------------- |
-| `PackAndGo_Lab2.rsproj` | Proyecto completo de RobotStudio empaquetado (`Pack & Go`) |
+| `Lab2.rsproj` | Proyecto completo de RobotStudio empaquetado (`Pack & Go`) |
 | `Tool_CAD.SAT`          | Modelo CAD de la herramienta para sujetar marcador         |
 | `Pastel_MD.SAT`    | Modelo CAD del WorkObject (pastel)                         |
 | `vid/`               | Carpeta con videos de simulación, ejecución y calibración  |
