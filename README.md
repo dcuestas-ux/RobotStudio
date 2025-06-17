@@ -159,7 +159,7 @@ flowchart TD
   
 * 🎥 *\[Video de la simulación en RobotStudio]*
 
-![Simulación RobotStudio](https://github.com/user-attachments/assets/639d4147-e196-416c-ac56-a8e2ef54de67)
+https://github.com/user-attachments/assets/639d4147-e196-416c-ac56-a8e2ef54de67
 
 * 🎥 *\[Video del robot real ejecutando la rutina]*
 
