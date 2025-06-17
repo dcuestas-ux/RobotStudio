@@ -1,6 +1,6 @@
 # 🎂 ABB IRB 140 - Decorador de Tortas Virtual (Lab 2 - Robótica Industrial)
 
-Este proyecto simula una celda robotizada de decoración de pasteles utilizando un robot **ABB IRB 140**. El sistema, desarrollado en **RobotStudio** y ejecutado en robot real, traza trayectorias que forman nombres y adornos sobre una torta virtual. El enfoque está inspirado en aplicaciones industriales de decoración automatizada en panaderías.
+Este proyecto simula una celda robotizada de decoración de pasteles utilizando un robot **ABB IRB 140**. El sistema, desarrollado en **RobotStudio** y ejecutado en robot real, traza trayectorias que forman nombres y adornos sobre una torta virtual. Para representar un entorno de producción más realista, se implementó una **línea de producción virtual** mediante **Smart Components** como `PlaneSensor`, `LinearMove` y `Source`, simulando el paso secuencial de pasteles por una banda transportadora.
 
 ---
 
@@ -28,6 +28,20 @@ Simular la decoración de una torta para 20 personas escribiendo los **nombres d
 * Movimiento continuo desde y hacia la posición `Home`
 * Uso de `MoveL`, `MoveC` según la geometría
 * Decoración sobre cuadrantes x(+), y(+), y su espejo x(+), y(–)
+* Integración con línea de producción usando sensores y lógica de flujo de piezas
+
+---
+
+## ⚙️ Lógica del Sistema de Producción (Smart Components)
+
+El sistema simula una celda con múltiples pasteles avanzando sobre una banda. Cuando un pastel llega a un punto de control (definido por un `PlaneSensor`), se detiene. En ese momento:
+
+1. El sensor activa una señal.
+2. El robot inicia la rutina `Path_MD()` sobre el objeto detectado.
+3. Tras finalizar, se reactiva la cinta mediante el componente `LinearMove`.
+4. El siguiente pastel es generado desde el `Source` y repite el ciclo.
+
+Esta integración permite simular un entorno semiautónomo de producción por lotes.
 
 ---
 
@@ -35,9 +49,11 @@ Simular la decoración de una torta para 20 personas escribiendo los **nombres d
 
 Se diseñó una herramienta que permite sujetar un plumón al flanche del robot.
 
-![Herramienta y robot](img/robotSim.png)
-
+![Herramienta y robot](attachment\:file-BpyEbLk2NPNubFXw54ofvF)
 *Figura: Herramienta personalizada montada sobre el ABB IRB 140. Se muestran los ejes del TCP y su orientación.*
+
+![Diseño CAD herramienta](attachment\:file-QwgGQc3ZE7cNMuGsNsnLxT)
+*Figura: Modelo CAD de la herramienta diseñada para sujetar un marcador. Se observan los agujeros de fijación y la forma cónica adaptada a la punta del plumón.*
 
 ---
 
@@ -48,13 +64,20 @@ Se definió un `WorkObject` con referencia al plano del pastel, permitiendo repl
 * Cuadrante principal: `x(+)`, `y(+)`
 * Cuadrante reflejado: `x(+)`, `y(–)`
 
-![WorkObject](img/WOfin.png)
-
+![WorkObject](attachment\:file-1BZDmDKJeYx14WLhnia1BN)
 *Figura: Vista superior del WorkObject y letras diseñadas sobre el pastel virtual.*
 
-![Vista superior WorkObject](img/workObj.png)
-
+![Vista superior WorkObject](attachment\:file-FjdVYyR5AkuBSvFtzXJUxz)
 *Figura: Visualización del sistema de coordenadas local del WorkObject en RobotStudio.*
+
+---
+
+## 🗺️ Plano de Planta
+
+A continuación se presenta una vista desde arriba (top view) de la celda robótica. Se observan claramente el robot ABB IRB 140, el transportador, la ubicación del pastel y la orientación del sistema.
+
+![Plano de planta de la celda](attachment\:file-HT9USpXc2RgKr8aJr1dANy)
+*Figura: Plano de planta de la celda. Se muestra la ubicación relativa del robot, el pastel, y el entorno de trabajo.*
 
 ---
 
@@ -65,12 +88,13 @@ Se crearon trayectorias para:
 * **Nombres del equipo**: usando líneas rectas (`MoveL`)
 * **Decoración libre**: combinando `MoveL` y `MoveC`
 
-![Trayectoria Curva - RobotStudio](img/trayectcircu.png)
+![Texto en CAD](attachment\:file-1BZDmDKJeYx14WLhnia1BN)
+*Figura: Diseño en CAD del texto "MD" con tamaño y tipo de fuente definidos en Fusion 360.*
 
+![Trayectoria Curva - RobotStudio](attachment\:file-S3xXqTmHniiGdFLKfJvoBq)
 *Figura: Conversión de movimientos lineales a circulares en RobotStudio usando la opción "Convert to Move Circular".*
 
-![Letra y trayectorias](img/trayect.png)
-
+![Letra y trayectorias](attachment\:file-Kp1qYkRU94cXr2tgw1cvtq)
 *Figura: Vista general de las trayectorias para letras y adornos con robtargets distribuidos.*
 
 ---
@@ -81,40 +105,56 @@ El siguiente fragmento muestra cómo se ejecuta la rutina desde `main()`:
 
 ```rapid
 PROC main()
-    MoveL Target_710,v50,z0,tHerramienta\WObj:=WObj_MD;
-    Path_MD;
-    MoveL Target_710,v50,z0,tHerramienta\WObj:=WObj_MD;
+    WHILE TRUE DO
+        WaitUntil PlaneSensor1=1;
+        MoveL Target_710,v50,z0,tHerramienta\WObj:=WObj_MD;
+        Path_MD;
+        MoveL Target_710,v50,z0,tHerramienta\WObj:=WObj_MD;
+        SetDO ProceedSignal,1;
+    ENDWHILE
 ENDPROC
 ```
 
 La trayectoria principal `Path_MD` contiene más de 60 instrucciones `MoveL` y `MoveC` conectadas para formar figuras con continuidad.
 
+### 🔍 Descripción de funciones RAPID utilizadas
+
+* **`main()`**: bucle principal que espera una señal de sensor (`PlaneSensor1=1`), ejecuta la rutina `Path_MD()` y luego activa una salida para continuar la banda.
+* **`Path_MD()`**: contiene la lógica de movimientos con instrucciones `MoveL` y `MoveC`.
+* Se usan señales de entrada y salida (`WaitUntil`, `SetDO`) para sincronizar con la línea de producción virtual.
+
+---
+
+## 🔄 Diagrama de Flujo de Acciones del Robot
+
+```mermaid
+flowchart TD
+    Start([Inicio]) --> EsperarSensor[Esperar señal del sensor (PlaneSensor1)]
+    EsperarSensor --> GoStart[Ir a posición inicial (Target_710)]
+    GoStart --> Ejecutar[Ejecutar rutina de trazado Path_MD()]
+    Ejecutar --> Regresar[Volver a posición inicial (Target_710)]
+    Regresar --> ActivarCinta[Activar señal ProceedSignal]
+    ActivarCinta --> EsperarSensor
+```
+
+*Figura: Diagrama de flujo con control sobre eventos de la banda transportadora virtual.*
+
 ---
 
 ## 🧪 Resultados
-* 🎥 *Video de la simulación en RobotStudio*
-  
-https://github.com/user-attachments/assets/1ffb557b-989b-4899-82ca-1c4c2cbe38be
 
-* 🎥 *Acercamiento, trayectoria en simulación*
+* 🎥 *\[Video de la simulación en RobotStudio]*
+* 🎥 *\[Video del robot real ejecutando la rutina]*
+* 🎥 *\[Video de calibración de herramienta (TCP)]*
 
-https://github.com/user-attachments/assets/ca8687a6-68b4-4238-8379-2b3b31b9bbda
-
-* 🎥 *Video de calibración de herramienta (TCP)*
-
-https://github.com/user-attachments/assets/c1560678-e146-4460-b916-9dac9f8096eb
-  
-* 🎥 *Video del robot real ejecutando la rutina*
-
-https://github.com/user-attachments/assets/1f7ac513-dd29-460d-893b-f6839253b33e
 ---
 
 ## 📌 Conclusiones
 
 * Se aplicaron conceptos de espacio de trabajo, TCP y WObj para trasladar trayectorias entre cuadrantes.
 * El uso de `MoveC` permitió representar geometrías curvas de forma fluida.
-* La calibración de la herramienta fue clave para que los trazos sean coherentes en el plano.
-* La experiencia reforzó habilidades en CAD, simulación y programación avanzada en RAPID.
+* La integración de sensores y flujo de objetos mediante Smart Components enriqueció la simulación industrial.
+* La experiencia reforzó habilidades en CAD, simulación, programación RAPID y lógica de control de procesos.
 
 ---
 
@@ -122,19 +162,19 @@ https://github.com/user-attachments/assets/1f7ac513-dd29-460d-893b-f6839253b33e
 
 | Archivo                | Descripción                               |
 | ---------------------- | ----------------------------------------- |
-| `LAB2_def.rspag`       | Código RAPID completo                     |
+| `Module1.mod`          | Código RAPID completo                     |
 | `herramienta.SAT`      | Modelo CAD de la herramienta              |
-| `img               `   | Carpeta con las imagenes del proyecto     |
-| `simulation_global.mp4` | Video de la simulación                   |
+| `img/WorkObject.png`   | Captura del WObj en RobotStudio           |
+| `video_simulacion.mp4` | Video de la simulación                    |
 | `video_ejecucion.mp4`  | Video del robot real ejecutando la rutina |
-| `calib_final.mp4`      | Video de calibración del TCP              |
+| `calibracion_tool.mp4` | Video de calibración del TCP              |
 
 ---
 
 ## 🧠 Notas
 
 * La parte de automatización por señales digitales fue descartada por razones de tiempo.
-* Se emplearon solo herramientas nativas de RobotStudio y programación RAPID.
+* Se emplearon herramientas nativas de RobotStudio, programación RAPID y Smart Components.
 
 ---
 
@@ -143,3 +183,4 @@ https://github.com/user-attachments/assets/1f7ac513-dd29-460d-893b-f6839253b33e
 * [ABB RAPID Language Manual](https://library.abb.com/)
 * [RobotStudio Online Help](https://developercenter.robotstudio.com/)
 * [LabSIR - Universidad Nacional](https://labsir.unal.edu.co/)
+
