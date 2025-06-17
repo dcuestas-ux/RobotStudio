@@ -82,7 +82,7 @@ Se definió un `WorkObject` con referencia al plano del pastel, permitiendo repl
 
 A continuación se presenta una vista desde arriba (top view) de la celda robótica. Se observan claramente el robot ABB IRB 140, el transportador, la ubicación del pastel y la orientación del sistema.
 
-![Plano de planta de la celda](attachment\:file-HT9USpXc2RgKr8aJr1dANy)
+![Plano de planta de la celda](img/planta.png)
 *Figura: Plano de planta de la celda. Se muestra la ubicación relativa del robot, el pastel, y el entorno de trabajo.*
 
 ---
@@ -94,10 +94,10 @@ Se crearon trayectorias para:
 * **Nombres del equipo**: usando líneas rectas (`MoveL`)
 * **Decoración libre**: combinando `MoveL` y `MoveC`
 
-![Texto en CAD](attachment\:file-1BZDmDKJeYx14WLhnia1BN)
+![Texto en CAD](img/WOfin.png)
 *Figura: Diseño en CAD del texto "MD" con tamaño y tipo de fuente definidos en Fusion 360.*
 
-![Trayectoria Curva - RobotStudio](attachment\:file-S3xXqTmHniiGdFLKfJvoBq)
+![Trayectoria Curva - RobotStudio](img/trayectcircu)
 *Figura: Conversión de movimientos lineales a circulares en RobotStudio usando la opción "Convert to Move Circular".*
 
 ![Letra y trayectorias](attachment\:file-Kp1qYkRU94cXr2tgw1cvtq)
