@@ -41,9 +41,12 @@ El sistema simula una celda con múltiples pasteles avanzando sobre una banda. C
 3. Tras finalizar, se reactiva la cinta mediante el componente `LinearMove`.
 4. El siguiente pastel es generado desde el `Source` y repite el ciclo.
 
-Esta integración permite simular un entorno semiautónomo de producción por lotes.
+A continuación se muestra el diagrama del Smart Component utilizado en la simulación:
 
----
+![Diagrama Smart Component](attachment\:file-9vxMtS3Uq6c5vLefj6MG9S)
+*Figura: Diagrama completo del Smart Component. Se incluyen componentes como Timer, Source, Queue, LinearMove y PlaneSensors con lógica condicional.*
+
+## Esta integración permite simular un entorno semiautónomo de producción por lotes.
 
 ## 🛠️ Herramienta Personalizada
 
@@ -160,14 +163,16 @@ flowchart TD
 
 ## 📂 Archivos del Proyecto
 
-| Archivo                | Descripción                               |
-| ---------------------- | ----------------------------------------- |
-| `Module1.mod`          | Código RAPID completo                     |
-| `herramienta.SAT`      | Modelo CAD de la herramienta              |
-| `img/WorkObject.png`   | Captura del WObj en RobotStudio           |
-| `video_simulacion.mp4` | Video de la simulación                    |
-| `video_ejecucion.mp4`  | Video del robot real ejecutando la rutina |
-| `calibracion_tool.mp4` | Video de calibración del TCP              |
+El proyecto completo está organizado en las siguientes carpetas y archivos:
+
+| Archivo/Carpeta         | Descripción                                                |
+| ----------------------- | ---------------------------------------------------------- |
+| `PackAndGo_Lab2.rsproj` | Proyecto completo de RobotStudio empaquetado (`Pack & Go`) |
+| `Tool_CAD.SAT`          | Modelo CAD de la herramienta para sujetar marcador         |
+| `WorkObject_CAD.SAT`    | Modelo CAD del WorkObject (pastel)                         |
+| `videos/`               | Carpeta con videos de simulación, ejecución y calibración  |
+| `imagenes/`             | Carpeta con capturas y diagramas utilizados en el informe  |
+| `Module1.mod`           | Código RAPID completo usado en el robot                    |
 
 ---
 
