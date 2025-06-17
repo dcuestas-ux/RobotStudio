@@ -95,9 +95,11 @@ Se crearon trayectorias para:
 * **Decoración libre**: combinando `MoveL` y `MoveC`
 
 ![Texto en CAD](img/WOfin.png)
+
 *Figura: Diseño en CAD del texto "MD" con tamaño y tipo de fuente definidos en Fusion 360.*
 
-![Trayectoria Curva - RobotStudio](img/trayectcircu)
+![Trayectoria Curva - RobotStudio](img/trayectcircu.png)
+
 *Figura: Conversión de movimientos lineales a circulares en RobotStudio usando la opción "Convert to Move Circular".*
 
 ![Letra y trayectorias](attachment\:file-Kp1qYkRU94cXr2tgw1cvtq)
@@ -175,7 +177,7 @@ El proyecto completo está organizado en las siguientes carpetas y archivos:
 | `WorkObject_CAD.SAT`    | Modelo CAD del WorkObject (pastel)                         |
 | `videos/`               | Carpeta con videos de simulación, ejecución y calibración  |
 | `imagenes/`             | Carpeta con capturas y diagramas utilizados en el informe  |
-| `Module1.mod`           | Código RAPID completo usado en el robot                    |
+
 
 ---
 
