@@ -92,6 +92,7 @@ Se crearon trayectorias para:
 *Figura: Conversión de movimientos lineales a circulares en RobotStudio usando la opción "Convert to Move Circular".*
 
 ![Letra y trayectorias](img/trayy.png)
+
 *Figura: Vista general de las trayectorias para letras y adornos con robtargets distribuidos.*
 
 ---
