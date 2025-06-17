@@ -44,6 +44,7 @@ Se diseñó una herramienta que permite sujetar un plumón al flanche del robot.
 *Figura: Modelo CAD de la herramienta diseñada para sujetar un marcador. Se observan los agujeros de fijación y la forma cónica adaptada a la punta del plumón.*
 
 
+
 * 🎥 *\[Video de calibración de herramienta (TCP)]*
   Para calibrar la herramienta se utilizó el método de cuatro puntos, mediante el cual se determinó la posición del punto central de la herramienta (TCP). El proceso arrojó un error general de 2,6 mm en la calibración
 
@@ -96,6 +97,9 @@ Se crearon trayectorias para:
 
 *Figura: Vista general de las trayectorias para letras y adornos con robtargets distribuidos.*
 
+https://github.com/user-attachments/assets/5e26dd88-1c4e-4cf2-864c-dd0e56e032f1
+
+* 🎥 *\[Movimiento del robot siguiendo trayectorias -Simulación]*
 ---
 
 ## 💻 Código RAPID
@@ -149,9 +153,7 @@ flowchart TD
 
 * 🎥 *\[Video del robot real ejecutando la rutina]*
 
-https://github.com/user-attachments/assets/e9d132d2-ca6a-482b-b14e-b54ffc52ca89
 
----
 
 ---
 
@@ -167,6 +169,7 @@ El sistema simula una celda con múltiples pasteles avanzando sobre una banda. C
 A continuación se muestra el diagrama del Smart Component utilizado en la simulación:
 
 ![Diagrama Smart Component](img/SmartComponent.jpg)
+
 *Figura: Diagrama completo del Smart Component. Se incluyen componentes como Timer, Source, Queue, LinearMove y PlaneSensors con lógica condicional.*
 
 Nota: El sistema cuenta con una entrada digital llamada START, que en un entorno físico podría estar conectada a un pulsador o interfaz de usuario para habilitar el ciclo de trabajo. En esta simulación, dicha señal se mantiene siempre en estado activo (ON), lo que permite que el sistema funcione de manera continua sin intervención manual.
@@ -175,7 +178,7 @@ Nota: El sistema cuenta con una entrada digital llamada START, que en un entorno
 
 * 🎥 *\[Video de la simulación en RobotStudio]*  
 
-https://github.com/user-attachments/assets/639d4147-e196-416c-ac56-a8e2ef54de67
+https://github.com/user-attachments/assets/b8160525-beae-4d17-a3f1-f0e78ddf8949
 
 
 ## 📌 Conclusiones
