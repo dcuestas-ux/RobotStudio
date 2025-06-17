@@ -145,7 +145,7 @@ flowchart TD
 * 🎥 *\[Simulación rutina en el piso]*
 
 
-
+https://github.com/user-attachments/assets/5c8f168d-5ca6-43aa-a8c8-afade868d02a
 
 ---
 
