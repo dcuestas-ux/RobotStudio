@@ -136,9 +136,9 @@ flowchart TD
 
 *Figura: Diagrama de flujo con control sobre eventos de la banda transportadora virtual.*
 
-* 🎥 *\[Video de la simulación en RobotStudio]*  
+* 🎥 *\[Simulación rutina en el piso]*
 
-https://github.com/user-attachments/assets/639d4147-e196-416c-ac56-a8e2ef54de67
+
 
 
 ---
@@ -168,6 +168,11 @@ A continuación se muestra el diagrama del Smart Component utilizado en la simul
 *Figura: Diagrama completo del Smart Component. Se incluyen componentes como Timer, Source, Queue, LinearMove y PlaneSensors con lógica condicional.*
 
 ## Esta integración permite simular un entorno semiautónomo de producción por lotes.
+
+* 🎥 *\[Video de la simulación en RobotStudio]*  
+
+https://github.com/user-attachments/assets/639d4147-e196-416c-ac56-a8e2ef54de67
+
 
 ## 📌 Conclusiones
 
