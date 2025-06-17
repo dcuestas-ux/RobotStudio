@@ -73,7 +73,8 @@ Se definió un `WorkObject` con referencia al plano del pastel, permitiendo repl
 
 *Figura: Vista superior del WorkObject y letras diseñadas sobre el pastel virtual.*
 
-![Vista superior WorkObject](attachment\:file-FjdVYyR5AkuBSvFtzXJUxz)
+![Vista superior WorkObject](img/wotra.png)
+
 *Figura: Visualización del sistema de coordenadas local del WorkObject en RobotStudio.*
 
 ---
@@ -102,7 +103,7 @@ Se crearon trayectorias para:
 
 *Figura: Conversión de movimientos lineales a circulares en RobotStudio usando la opción "Convert to Move Circular".*
 
-![Letra y trayectorias](attachment\:file-Kp1qYkRU94cXr2tgw1cvtq)
+![Letra y trayectorias](img/trayy.png)
 *Figura: Vista general de las trayectorias para letras y adornos con robtargets distribuidos.*
 
 ---
@@ -174,9 +175,9 @@ El proyecto completo está organizado en las siguientes carpetas y archivos:
 | ----------------------- | ---------------------------------------------------------- |
 | `PackAndGo_Lab2.rsproj` | Proyecto completo de RobotStudio empaquetado (`Pack & Go`) |
 | `Tool_CAD.SAT`          | Modelo CAD de la herramienta para sujetar marcador         |
-| `WorkObject_CAD.SAT`    | Modelo CAD del WorkObject (pastel)                         |
-| `videos/`               | Carpeta con videos de simulación, ejecución y calibración  |
-| `imagenes/`             | Carpeta con capturas y diagramas utilizados en el informe  |
+| `Pastel_MD.SAT`    | Modelo CAD del WorkObject (pastel)                         |
+| `vid/`               | Carpeta con videos de simulación, ejecución y calibración  |
+| `img/`             | Carpeta con capturas y diagramas utilizados en el informe  |
 
 
 ---
