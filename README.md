@@ -158,12 +158,13 @@ flowchart TD
 
 [https://github.com/dcuestas-ux/RobotStudio/blob/0788a954318bf5f46a4889da9c78cd59bd877060/vid/calib_final](https://github.com/user-attachments/assets/9738a95b-ae7c-4b41-90e0-3457959aa022)
   
-* 🎥 *\[Video de la simulación en RobotStudio]*
+* 🎥 *\[Video de la simulación en RobotStudio]* 
 
 https://github.com/user-attachments/assets/639d4147-e196-416c-ac56-a8e2ef54de67
 
 * 🎥 *\[Video del robot real ejecutando la rutina]*
 
+https://github.com/user-attachments/assets/e9d132d2-ca6a-482b-b14e-b54ffc52ca89
 
 ---
 
