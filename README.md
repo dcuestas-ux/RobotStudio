@@ -157,11 +157,11 @@ https://github.com/user-attachments/assets/e9d132d2-ca6a-482b-b14e-b54ffc52ca89
 
 ## ⚙️ Lógica del Sistema de Producción (Smart Components)
 
-El sistema simula una celda con múltiples pasteles avanzando sobre una banda. Cuando un pastel llega a un punto de control (definido por un `PlaneSensor`), se detiene. En ese momento:
+El sistema simula una celda con múltiples pasteles avanzando sobre una banda. Cuando un pastel llega a un punto de control (definido por un PlaneSensor), se detiene momentáneamente y luego continúa su avance hasta el siguiente sensor. En ese momento, Se puede apreciar una señal de entrada que, aunque está creada, no se encuentra conectada al SmartComponent. Dicha señal representaría una salida del controlador que daría inicio a la secuencia correspondiente. Sin embargo, en este caso el proceso se ha configurado como completamente automático, activándose mediante la señal negada del sensor.Un paso adiconal importante es  agregar las correpsondientes señales al controlador y conectarlas  en el Station Logic.
 
 1. El sensor activa una señal.
 2. El robot inicia la rutina `Path_MD()` sobre el objeto detectado.
-3. Tras finalizar, se reactiva la cinta mediante el componente `LinearMove`.
+3. Tras finalizar, se reactiva  `LinearMove`.
 4. El siguiente pastel es generado desde el `Source` y repite el ciclo.
 
 A continuación se muestra el diagrama del Smart Component utilizado en la simulación:
