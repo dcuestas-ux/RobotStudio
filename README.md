@@ -52,10 +52,12 @@ A continuación se muestra el diagrama del Smart Component utilizado en la simul
 
 Se diseñó una herramienta que permite sujetar un plumón al flanche del robot.
 
-![Herramienta y robot](attachment\:file-BpyEbLk2NPNubFXw54ofvF)
+![Herramienta y robot](img/herramientaABB.png)
+
 *Figura: Herramienta personalizada montada sobre el ABB IRB 140. Se muestran los ejes del TCP y su orientación.*
 
-![Diseño CAD herramienta](attachment\:file-QwgGQc3ZE7cNMuGsNsnLxT)
+![Diseño CAD herramienta](img/CADHerramienta.jpg)
+
 *Figura: Modelo CAD de la herramienta diseñada para sujetar un marcador. Se observan los agujeros de fijación y la forma cónica adaptada a la punta del plumón.*
 
 ---
