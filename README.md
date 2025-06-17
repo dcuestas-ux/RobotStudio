@@ -129,11 +129,11 @@ La trayectoria principal `Path_MD` contiene más de 60 instrucciones `MoveL` y `
 
 ```mermaid
 flowchart TD
-    Start([Inicio]) --> EsperarSensor[Esperar señal del sensor (PlaneSensor1)]
-    EsperarSensor --> GoStart[Ir a posición inicial (Target_710)]
-    GoStart --> Ejecutar[Ejecutar rutina de trazado Path_MD()]
-    Ejecutar --> Regresar[Volver a posición inicial (Target_710)]
-    Regresar --> ActivarCinta[Activar señal ProceedSignal]
+    Start([Inicio]) --> EsperarSensor["Esperar señal del sensor (PlaneSensor1)"]
+    EsperarSensor --> GoStart["Ir a posición inicial (Target_710)"]
+    GoStart --> Ejecutar["Ejecutar rutina de trazado Path_MD()"]
+    Ejecutar --> Regresar["Volver a posición inicial (Target_710)"]
+    Regresar --> ActivarCinta["Activar señal ProceedSignal"]
     ActivarCinta --> EsperarSensor
 ```
 
