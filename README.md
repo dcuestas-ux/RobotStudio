@@ -69,7 +69,8 @@ Se definió un `WorkObject` con referencia al plano del pastel, permitiendo repl
 * Cuadrante principal: `x(+)`, `y(+)`
 * Cuadrante reflejado: `x(+)`, `y(–)`
 
-![WorkObject](attachment\:file-1BZDmDKJeYx14WLhnia1BN)
+![WorkObject](img/trayect.png)
+
 *Figura: Vista superior del WorkObject y letras diseñadas sobre el pastel virtual.*
 
 ![Vista superior WorkObject](attachment\:file-FjdVYyR5AkuBSvFtzXJUxz)
