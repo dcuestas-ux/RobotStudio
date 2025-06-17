@@ -153,7 +153,7 @@ https://github.com/user-attachments/assets/5c8f168d-5ca6-43aa-a8c8-afade868d02a
 
 * 🎥 *\[Video del robot real ejecutando la rutina]*
 
-
+https://github.com/dcuestas-ux/RobotStudio/blob/09dd2ca5fb981fbd5d04422670d44e6f828a3692/vid/definitivoReal.webm
 
 ---
 
