@@ -204,7 +204,7 @@ El proyecto completo está organizado en las siguientes carpetas y archivos:
 
 ## 🧠 Notas
 
-* La parte de automatización por señales digitales fue descartada por razones de tiempo.
+* Es importante tener bien calibrada la herramienta.
 * Se emplearon herramientas nativas de RobotStudio, programación RAPID y Smart Components.
 
 ---
