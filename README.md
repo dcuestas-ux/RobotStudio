@@ -155,7 +155,7 @@ flowchart TD
 
 * 🎥 *\[Video de calibración de herramienta (TCP)]*
 
-vid/calib_final
+https://github.com/dcuestas-ux/RobotStudio/blob/0788a954318bf5f46a4889da9c78cd59bd877060/vid/calib_final
   
 * 🎥 *\[Video de la simulación en RobotStudio]*
 
