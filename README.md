@@ -152,9 +152,17 @@ flowchart TD
 
 ## 🧪 Resultados
 
-* 🎥 *\[Video de la simulación en RobotStudio]*
-* 🎥 *\[Video del robot real ejecutando la rutina]*
+
 * 🎥 *\[Video de calibración de herramienta (TCP)]*
+
+
+  
+* 🎥 *\[Video de la simulación en RobotStudio]*
+
+![Simulación RobotStudio](https://github.com/dcuestas-ux/RobotStudio/blob/main/vid/simu_banda.webm)  
+
+* 🎥 *\[Video del robot real ejecutando la rutina]*
+
 
 ---
 
