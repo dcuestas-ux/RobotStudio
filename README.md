@@ -45,6 +45,7 @@ Se diseñó una herramienta que permite sujetar un plumón al flanche del robot.
 
 
 * 🎥 *\[Video de calibración de herramienta (TCP)]*
+  Para calibrar la herramienta se utilizó el método de cuatro puntos, mediante el cual se determinó la posición del punto central de la herramienta (TCP). El proceso arrojó un error general de 2,6 mm en la calibración
 
 [https://github.com/dcuestas-ux/RobotStudio/blob/0788a954318bf5f46a4889da9c78cd59bd877060/vid/calib_final](https://github.com/user-attachments/assets/9738a95b-ae7c-4b41-90e0-3457959aa022)
 
