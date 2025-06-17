@@ -155,7 +155,7 @@ flowchart TD
 
 * 🎥 *\[Video de calibración de herramienta (TCP)]*
 
-
+vid/calib_final
   
 * 🎥 *\[Video de la simulación en RobotStudio]*
 
