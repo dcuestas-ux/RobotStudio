@@ -128,19 +128,7 @@ La trayectoria principal `Path_MD` contiene más de 60 instrucciones `MoveL` y `
 
 ---
 
-## 🔄 Diagrama de Flujo de Acciones del Robot
 
-```mermaid
-flowchart TD
-    Start([Inicio]) --> EsperarSensor["Esperar señal del sensor (PlaneSensor1)"]
-    EsperarSensor --> GoStart["Ir a posición inicial (Target_710)"]
-    GoStart --> Ejecutar["Ejecutar rutina de trazado Path_MD()"]
-    Ejecutar --> Regresar["Volver a posición inicial (Target_710)"]
-    Regresar --> ActivarCinta["Activar señal ProceedSignal"]
-    ActivarCinta --> EsperarSensor
-```
-
-*Figura: Diagrama de flujo con control sobre eventos de la banda transportadora virtual.*
 
 * 🎥 *\[Simulación rutina en el piso]*
 
@@ -158,6 +146,19 @@ https://github.com/user-attachments/assets/5c8f168d-5ca6-43aa-a8c8-afade868d02a
 ---
 
 ## ⚙️ Lógica del Sistema de Producción (Smart Components)
+## 🔄 Diagrama de Flujo de Acciones del Robot
+
+```mermaid
+flowchart TD
+    Start([Inicio]) --> EsperarSensor["Esperar señal del sensor (PlaneSensor1)"]
+    EsperarSensor --> GoStart["Ir a posición inicial (Target_710)"]
+    GoStart --> Ejecutar["Ejecutar rutina de trazado Path_MD()"]
+    Ejecutar --> Regresar["Volver a posición inicial (Target_710)"]
+    Regresar --> ActivarCinta["Activar señal ProceedSignal"]
+    ActivarCinta --> EsperarSensor
+```
+
+*Figura: Diagrama de flujo con control sobre eventos de la banda transportadora virtual.*
 
 El sistema simula una celda con múltiples pasteles avanzando sobre una banda. Cuando un pastel llega a un punto de control (definido por un PlaneSensor), se detiene momentáneamente y luego continúa su avance hasta el siguiente sensor. En ese momento, Se puede apreciar una señal de entrada que, aunque está creada, no se encuentra conectada al SmartComponent. Dicha señal representaría una salida del controlador que daría inicio a la secuencia correspondiente. Sin embargo, en este caso el proceso se ha configurado como completamente automático, activándose mediante la señal negada del sensor.Un paso adiconal importante es  agregar las correpsondientes señales al controlador y conectarlas  en el Station Logic.
 
